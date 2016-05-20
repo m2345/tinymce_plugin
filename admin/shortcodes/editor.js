@@ -99,7 +99,7 @@
 		editor.addCommand( 'wp_foundation_shortcodes_insert_inline_list', function( ui, v ) {
                         editor.insertContent( '[inline_list custom_class="your_custom_class"] [link url="#"] Link 1 [/link] [link url="#"] Link 2 [/link] [link url="#"] Link 3 [/link] [link url="#"] Link 4 [/link] [link url="#"] Link 5 [/link] [/inline_list]' );
                 });
-
+		
 		// Add a button that opens a window
 		editor.addButton( 'wp_foundation_shortcodes_shortcodes_button', {
 			type: 'menubutton',
@@ -145,11 +145,13 @@
 					{text: 'Tags', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_insert_self_immediate', false, 'tags', { title: 'Tags' } ); } }
 				]},
 				// Content.
+				//accordion edited by megan 5-17-16 need to show dialog
 				{text: 'Content', menu:[
 					{text: 'Pricing Table', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_open_dialog', false, 'pricing_table', { title: 'Pricing Table' } ); } },
 					{text: 'Progressbar', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_open_dialog', false, 'progressbar', { title: 'Progressbar' } ); } },
 					{text: 'Table', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_insert_table', false, 'table', { title: 'Table' } ); } },
-					{text: 'Accordion', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_insert_accordions', false, 'accordions', { title: 'Accordion' } ); } },
+					//{text: 'Accordion', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_insert_accordions', false, 'accordions', { title: 'Accordion' } ); } },
+					{text: 'Accordion', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_open_dialog', false, 'accordions', { title: 'Accordion' } ); } },
 					{text: 'Tabs', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_open_dialog', false, 'tabs', { title: 'Tabs' } ); } },
 					{text: 'Equalizer', onclick: function() { editor.execCommand( 'wp_foundation_shortcodes_insert_equalizer', false, 'equalizer', { title: 'Equalizer' } ); } },
 				]},

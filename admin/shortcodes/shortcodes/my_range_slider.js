@@ -9,6 +9,16 @@ frameworkShortcodeAtts={
                                 defaultText: 'horizontal',
                                 help:"Choose horizontal or vertical display."
 			},
+						{
+                               
+                                label:"Two Handles",
+                                id:"two_handles",
+                                controlType:"select-control",
+                                selectValues:['true', 'false'],
+                                defaultValue: 'false',
+                                defaultText: 'false',
+                                help:"Show two handles on the slider?"
+                        },
 			{
                                 label:"Accessibility",
                                 id:"accessibility",
@@ -51,7 +61,8 @@ frameworkShortcodeAtts={
                                 label: "Step",
                                 id: "step",
                                 help: "Enter step value. Default 1."
-                        }
+                        },
+                        
         ],
         defaultContent:"",
         shortcode:"range_slider"
